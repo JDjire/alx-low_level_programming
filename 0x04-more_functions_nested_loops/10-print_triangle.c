@@ -1,26 +1,22 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - prime numbers
- *
- * Return: 0
+ * print_triangle - prints a triangle.
+ * @size: numbers of lines.
+ * Return: no return.
  */
-
-int main(void)
+void print_triangle(int size)
 {
-	long num = 612852475143;
-	long divisor = 2;
-	long larg_prim = 0;
+	int i, j;
 
-	while (num != 1)
+	for (i = 0; i < size; i++)
 	{
-		if (num % divisor == 0)
-		{
-			num = num / divisor;
-			larg_prim = divisor;
-		}
-		divisor += 1;
+		for (j = 1; j < (size - i); j++)
+			_putchar(' ');
+		for (j--; j < size; j++)
+			_putchar(35);
+		if (i < (size - 1))
+			_putchar('\n');
 	}
-	printf("%ld\n", larg_prim);
-	return (0);
+	_putchar('\n');
 }
