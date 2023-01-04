@@ -13,7 +13,7 @@ int is_sqrt(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	return (is_sqrt(n, i + 1))
+	return (is_sqrt(n, i + 1));
 }
 
 /**
